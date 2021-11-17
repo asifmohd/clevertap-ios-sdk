@@ -1494,9 +1494,6 @@ static NSMutableArray<CTInAppDisplayViewController*> *pendingNotificationControl
     // check to see whether the push includes a test in-app notification, if so don't process further
     if ([self didHandleInAppTestFromPushNotificaton:notification]) return;
     
-    // check to see whether the push includes a test inbox message, if so don't process further
-    if ([self didHandleInboxMessageTestFromPushNotificaton:notification]) return;
-    
     // check to see whether the push includes a test display unit, if so don't process further
     if ([self didHandleDisplayUnitTestFromPushNotificaton:notification]) return;
     
