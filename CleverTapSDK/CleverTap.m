@@ -1541,8 +1541,6 @@ static NSMutableArray<CTInAppDisplayViewController*> *pendingNotificationControl
         }
         if ([self didHandleInAppTestFromPushNotificaton:testPayload]) {
             return YES;
-        } else if ([self didHandleInboxMessageTestFromPushNotificaton:testPayload]) {
-            return YES;
         } else if ([self didHandleDisplayUnitTestFromPushNotificaton:testPayload]) {
             return YES;
         } else {
