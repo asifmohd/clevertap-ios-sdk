@@ -143,8 +143,11 @@ static void CleverTapReachabilityHandler(SCNetworkReachabilityRef target, SCNetw
 
 + (NSString *)getPlatformName {
     struct utsname systemInfo;
-    uname(&systemInfo);
-    return @(systemInfo.machine);
+    if (uname(&systemInfo) == 0) {
+        return @(systemInfo.machine);
+    } else {
+        return nil;
+    }
 }
 
 - (void)initDeviceID:(NSString *)cleverTapID {
